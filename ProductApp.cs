@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductApp
+namespace EncapsulationApp
 {
     public class ProductApp
     {
@@ -26,7 +26,7 @@ namespace ProductApp
             return price - (price * DISCOUNT_PERCENTAGE / 100);
         }
 
-        public void DisplayProductDetails(ProductApp product)
+        public  void DisplayProductDetails(ProductApp product)
         {
             Console.WriteLine($"Product ID: {product.id}");
             Console.WriteLine($"Product Name: {product.name}");
@@ -34,6 +34,4 @@ namespace ProductApp
             Console.WriteLine($"Discounted Price with {DISCOUNT_PERCENTAGE}% Discount: {product.CalculateDiscountedPrice()}");
         }
     }
-
 }
-
