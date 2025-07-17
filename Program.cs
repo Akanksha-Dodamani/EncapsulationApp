@@ -1,4 +1,6 @@
-﻿namespace EncapsulationApp
+﻿using System.Numerics;
+
+namespace EncapsulationApp
 {
     internal class Program
     {
@@ -18,6 +20,15 @@
             student1.Cgpa = 8.6;
 
             Console.WriteLine($"Id: {student1.RollNo}, Name: {student1.Name}, Cgpa: {student1.Cgpa}, Percentage: {student1.GetPercentage()}");
+
+            // Player App
+            PlayerApp player1 = new PlayerApp(1, "Sam", 10);
+            PlayerApp player2 = new PlayerApp(2, "Pam");
+
+            Console.WriteLine($"Player 1: {player1.GetName()}, ID: {player1.GetId()}, Age: {player1.GetAge()}");
+            Console.WriteLine($"Player 2: {player2.GetName()}, ID: {player2.GetId()}, Age: {player2.GetAge()}\n");
+
+            player1.WhoIsElder(player1, player2);
         }
     }
 }
